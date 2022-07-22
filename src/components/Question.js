@@ -15,7 +15,13 @@ function Question({ question, onAnswered }) {
   const idTime = setTimeout(() => {
     setTimeRemaining((timeRemaining)=>timeRemaining -1);
   }, 1000);
-
+  return function(){
+    clearTimeout(idTime);
+  };
+}, [timeRemaining, onAnswered]
+  
+  
+  )
   return (
     <>
       <h1>Question {id}</h1>
