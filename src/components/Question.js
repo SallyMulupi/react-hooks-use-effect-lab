@@ -13,6 +13,8 @@ function Question({ question, onAnswered }) {
   }
 
   const idTime = setTimeout(() => {
+    setTimeRemaining((timeRemaining)=>timeRemaining -1);
+  }, 1000);
 
   return (
     <>
