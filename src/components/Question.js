@@ -26,6 +26,7 @@ function Question({ question, onAnswered }) {
     setTimeRemaining(10);
     onAnswered(isCorrect);
   }
+  const { id, prompt, answers, correctIndex } = question;
 
   return (
     <>
