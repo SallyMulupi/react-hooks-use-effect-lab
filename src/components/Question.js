@@ -22,6 +22,11 @@ function Question({ question, onAnswered }) {
   
   
   )
+  function handleAnswer(isCorrect) {
+    setTimeRemaining(10);
+    onAnswered(isCorrect);
+  }
+
   return (
     <>
       <h1>Question {id}</h1>
