@@ -5,7 +5,8 @@ function Question({ question, onAnswered }) {
 
   // add useEffect code
 
-  function handleAnswer(isCorrect) {
+  useEffect(() =>{
+    if (timeRemaining === 0) {
     setTimeRemaining(10);
     onAnswered(isCorrect);
   }
