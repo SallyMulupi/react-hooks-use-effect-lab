@@ -9,9 +9,10 @@ function Question({ question, onAnswered }) {
     if (timeRemaining === 0) {
     setTimeRemaining(10);
     onAnswered(isCorrect);
+    return;
   }
 
-  const { id, prompt, answers, correctIndex } = question;
+  const idTime = setTimeout(() => {
 
   return (
     <>
